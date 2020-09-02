@@ -1,0 +1,324 @@
+#ListWin .listHeader{
+	width:100%;
+	height:110px;
+}
+#ListWin .listBodyer{
+	width:100%;
+	height:320px;
+	background:rgba(255,255,255,0.3);
+}
+#ListWin .listFooter{
+	width:100%;
+	height:40px;
+	background:rgba(255,255,255,0.8);
+}
+#ListWin .WinButton{
+	height:30px;
+	float:right;
+}
+#ListWin .WinButton img{
+	float:right;
+	margin-left:2px;
+	width:30px;
+}
+#ListWin .WinButton img:hover{
+	cursor:pointer;
+}
+#ListWin .listHeader .listImg{
+	width:100%;
+	height:70px;
+	display:table;
+}
+#ListWin .listHeader .listImg #PHPChatUserHead{
+	width:50px;
+	height:50px;
+	float:left;
+	color:#ccc;
+	text-align: center;
+	font-size: 23px;
+	line-height: 50px;
+	border:2px solid #ccc;
+	border-radius:30px;
+	margin-top:5px;
+	margin-left:20px;
+}
+#ListWin .listHeader .listImg #PHPChatUserName{
+	max-width:150px;
+	height:20px;
+	font-size:16px;
+	margin-top:10px;
+	margin-left:85px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#ListWin .listHeader .listImg #PHPChatUserSign{
+	max-width: 150px;
+	height:20px;
+	color:#999;
+	font-size:12px;
+	margin-top:8px;
+	margin-left:85px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#ListWin .listHeader .listOptions{
+	width:100%;
+	height:40px;
+	position: absolute;
+}
+#ListWin .listHeader .listOptions .option{
+	width:33.33%;
+	height:40px;
+	float:left;
+}
+#ListWin .listHeader .listOptions .option img{
+	width:30px;
+	height:30px;
+	margin:0 auto;
+	margin-top:4px;
+	display:block;
+}
+#ListWin .listHeader .listOptions .option span{
+	width:10px;
+	height:10px;
+	display:block;
+	float:right;
+	line-height:20px;
+	margin-top:-27px;
+	margin-right:15px;
+	border-radius:15px;
+	color:#fff;
+	font-size:10px;
+	background:#f33;
+	text-align: center;
+	/*display: none;*/
+}
+#ListWin .listHeader .listOptions #PHPChatOptionroll{
+	width:33.33%;
+	height:4px;
+	position: absolute;
+	top:36px;
+	left:0;
+	background:#9f9;
+}
+
+#ListWin .listBodyer .search{
+	width:100%;
+	height:30px;
+	display: table;
+}
+#ListWin .listBodyer .search label{
+	width:240px;
+	height:24px;
+	display: block;
+	margin: 0 auto;
+	margin-top:3px;
+	overflow: hidden;
+	border-radius:12px;
+	background:#fff;
+}
+#ListWin .listBodyer .search input{
+	width:100%;
+	height:100%;
+	border:none;
+	outline:none;
+	text-align: center;
+}
+#ListWin .listBodyer #PHPChatSearchlist{
+	width:100%;
+	height:290px;
+	float:left;
+	margin-top:-290px;
+	background:#fff;
+	display: none;
+}
+#ListWin .listBodyer #PHPChatSearchlist span.listnull{
+	width:100%;
+	height:100%;
+	display: block;
+	text-align: center;
+	line-height: 290px;
+	color:#999;
+	font-size: 13px;
+}
+#ListWin .listBodyer .listbox{
+	width:780px;
+	height:290px;
+}
+#ListWin .listBodyer .listbox #PHPChatlistbox1,
+#ListWin .listBodyer .listbox #PHPChatlistbox2,
+#ListWin .listBodyer .listbox #PHPChatlistbox3
+{
+	width:260px;
+	height:290px;
+	float:left;
+}
+ul,li{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#ListWin .listBodyer .listbox ul{
+	width:100%;
+}
+#ListWin .listBodyer .listbox ul .listhead{
+	width:100%;
+	height:35px;
+	display:table;
+}
+#ListWin .listBodyer .listbox ul .listhead img{
+	width:20px;
+	height:20px;
+	float: left;
+	display:block;
+	margin-top:8px;
+	margin-left:15px;
+}
+#ListWin .listBodyer .listbox ul .listhead span{
+	display: block;
+	height:35px;
+	margin-left:40px;
+	font-size:13px;
+	line-height: 35px;
+}
+#ListWin .listBodyer .listbox ul .listbody{
+	width:100%;
+	height:255px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+#ListWin .listBodyer .listbox ul .listbody::-webkit-scrollbar {
+    width: 10px;
+    border-radius:6px;
+    background-color: #ddd;
+}
+
+#ListWin .listBodyer .listbox ul .listbody::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius:6px;
+}
+
+#ListWin .listBodyer .listbox ul .listbody::-webkit-scrollbar-thumb {
+	border-radius:6px;
+    background: #bbb;
+}
+#ListWin .listBodyer .listbox ul .listBody li,
+#PHPChatSearchlist li{
+	display: table;
+	width:100%;
+	height:50px;
+}
+#ListWin .listBodyer .listbox ul .listBody li:hover{
+	background:rgba(255,255,255,0.9);
+}
+#PHPChatSearchlist li:hover{
+	background:#d9d9d9;
+}
+#ListWin .listBodyer .listbox ul .listBody li .listuserhead,
+#PHPChatSearchlist .listuserhead{
+	width:40px;
+	height:40px;
+	float:left;
+	margin-top:5px;
+	margin-left:10px;
+	text-align: center;
+	line-height: 40px;
+	border-radius:20px;
+}
+.online{
+	color:#fff;
+	background:#666;
+}
+.noline{
+	color:#aaa;
+	background:#ddd;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row,
+#PHPChatSearchlist li .row{
+	width:100%;
+	height:25px;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row .listusername,
+#PHPChatSearchlist li .row .listusername{
+	float: left;
+	max-width: 110px;
+	height:20px;
+	margin-top:5px;
+	margin-left:5px;
+	font-size:16px;
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row .listnewsnum{
+	float: right;
+	height:20px;
+	display: block;
+	font-size:12px;
+	margin-top:5px;
+	margin-right:5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius:10px;
+	line-height: 20px;
+	color:#fff;
+	background:#f33;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row .listusernews,
+#PHPChatSearchlist li .row .listusernews{
+	float:left;
+	color:#888;
+	max-width: 110px;
+	display: block;
+	font-size: 12px;
+	margin-top:2px;
+	margin-left: 5px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row .listusernewss{
+	float:left;
+	color:#888;
+	max-width: 180px;
+	display: block;
+	font-size: 12px;
+	margin-top:2px;
+	margin-left: 5px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ListWin .listBodyer .listbox ul .listBody li .row .listnewsdate{
+	float:right;
+	color:#888;
+	display: block;
+	font-size: 12px;
+	margin-top:2px;
+	margin-right: 5px;
+}
+#ListWin .listBodyer .listbox ul .listBody li .listdel{
+	width:75px;
+	height:50px;
+	margin-top:-50px;
+	float:right;
+	display: none;
+	background:#eee;
+}
+#ListWin .listBodyer .listbox ul .listBody li .listdel img{
+	width:20px;
+	height:20px;
+	display:block;
+	float:right;
+	margin-top:15px;
+	margin-right:10px;
+}
+#ListWin .listFooter img{
+	width:22px;
+	height:22px;
+	margin:9px 0px 9px 18px;
+	float:left;
+}

@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>PHPChat聊天室</title>
+<link rel="stylesheet" href="./css/login.css">
+<link rel="stylesheet" href="./css/list.css">
+<link rel="stylesheet" href="./css/chat.css">
+<link rel="stylesheet" href="./css/user.css">
+<script src="./js/jq.js"></script>
+<script src="./js/main.js"></script>
+</head>
+<body>
+<div id="PHPChat">
+	<div id="ListWin" class="Drag">
+		<div class="WinButton noDrag noselect">
+			<img src="./src/close.svg" onclick="ClosePHPChat();">
+		</div>
+		<div style="clear:both;"></div>
+		<div class="listHeader noDrag noselect">
+			<div class="listImg">
+				<div id="PHPChatUserHead" onclick="getuserdata(0);">洛</div>
+				<div id="PHPChatUserName">洛</div>
+				<div id="PHPChatUserSign">这个人很懒，什么都没留下</div>
+			</div>
+			<div class="listOptions">
+				<div class="option shou" onclick="Options(1);">
+					<img src="./src/personchat.svg">
+					<!-- <span></span> -->
+				</div>
+				<div class="option shou" onclick="Options(2);">
+					<img src="./src/hall.svg">
+					<!-- <span></span> -->
+				</div>
+				<div class="option shou" onclick="Options(3);">
+					<img src="./src/groupchat.svg">
+					<!-- <span></span> -->
+				</div>
+				<div id="PHPChatOptionroll"></div>
+			</div>
+		</div>
+		<div class="listBodyer noDrag noselect">
+			<div class="search">
+				<label for="PHPChatSearch">
+					<input type="text" id="PHPChatSearch" oninput="Search(this.value);" onpropertychange="Search(this.value);" onfocus="searchbox(true);" placeholder="请输入关键字" autocomplete="off" maxlength="20" name="search">
+				</label>
+			</div>
+			<div class="listbox">
+				<div id="PHPChatlistbox1">
+					<ul>
+						<div class="listhead" onclick="openlist(this);" value="false">
+							<img src="./src/listopen.svg">
+							<span>我的好友(30/100)</span>
+						</div>
+						<div class="listbody">
+							<li value="0">
+								<div class="listuserhead">系</div>
+								<div class="row">
+									<span class="listusername">系统</span>
+									<span class="listnewsnum">0</span>
+								</div>
+								<div class="row">
+									<span class="listusernews">我是系统通知</span>
+									<span class="listnewsdate"></span>
+								</div>
+							</li>
+						</div>
+					</ul>
+				</div>
+				<div id="PHPChatlistBox2">
+					<ul>
+						<div class="listhead" onclick="openlist(this);" value="false">
+							<img src="./src/listopen.svg">
+							<span>大厅在线(30)</span>
+						</div>
+						<div class="listbody">
+							<li>
+								<div class="listuserhead">2</div>
+								<div class="row">
+									<span class="listusername">236</span>
+								</div>
+								<div class="row">
+									<span class="listusernewss">[个性签名]你说什么？0000000000000</span>
+									<!-- <span class="listnewsdate">2018-06-12</span> -->
+								</div>
+							</li>
+						</div>
+					</ul>
+				</div>
+				<div id="PHPChatlistBox3">
+					<ul>
+						<div class="listhead" onclick="openlist(this);" value="false">
+							<img src="./src/listopen.svg">
+							<span>我的群组</span>
+						</div>
+						<div class="listbody">
+							<li>
+								<div class="listuserhead">2</div>
+								<div class="row">
+									<span class="listusername">236</span>
+									<span class="listnewsnum">9999</span>
+								</div>
+								<div class="row">
+									<span class="listusernews">你说什么？</span>
+									<span class="listnewsdate">2018-06-12</span>
+								</div>
+							</li>
+							<li>
+								<div class="listuserhead">2</div>
+								<div class="row">
+									<span class="listusername">236</span>
+									<span class="listnewsnum">9999</span>
+								</div>
+								<div class="row">
+									<span class="listusernews">你说什么？</span>
+									<span class="listnewsdate">2018-06-12</span>
+								</div>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div id="PHPChatSearchlist">
+				<li value="0" onclick="Chat(this.value);">
+					<div class="listuserhead online">系</div>
+					<div class="row">
+						<span class="listusername">系统</span>
+					</div>
+					<div class="row">
+						<span class="listusernews">我是系统通知</span>
+					</div>
+				</li>
+				<span class="listnull">好像找不到了QAQ~~~</span>
+			</div>
+		</div>
+		<div class="listFooter noDrag noselect">
+			<img class="shou" src="./src/search.svg" title="大厅搜索添加好友">
+			<img class="shou" src="./src/theme.svg" title="开发中...">
+			<img class="shou" src="./src/setting.svg" title="开发中...">
+		</div>
+	</div>
+	<div id="LoginWin" class="noselect">
+		<form class="box" id="LoginBox" onsubmit="return Login();">
+			<div class="row">
+				<label for="user" class="xie">
+					<img src="./src/user.svg">
+					<input type="text" id ="user" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="请输入账号(6-10位)" onfocus="clearLoginhint();" autocomplete="off" maxlength="10" name="user">
+				</label>
+			</div>
+			<div class="row">
+				<label for="pass" class="xie">
+					<img src="./src/pass.svg">
+					<input type="password" id="pass" onKeyUp="value=value.replace(/[\W]/g,'')" maxlength="10" name="pass" onfocus="clearLoginhint();" placeholder="请输入密码(6-10位)">
+					<img class="visible shou" src="./src/visible.svg" onclick="visible(pass);">
+				</label>
+			</div>
+			<div class="row1">
+				<label for="remember" class="shou">
+					<input type="checkbox" id="remember">
+					<span>记住密码</span>
+				</label>
+			</div>
+			<div id="loginhint">
+				<span></span>
+			</div>
+			<div class="row0">
+				<input type="submit" class="shou" value="登陆">
+			</div>
+			<div class="row0">
+				<span class="shou" onclick="Box('none');">注册</span>
+			</div>
+		</form>
+		<form class="box" id="RegistBox" onsubmit="return Regist();">
+			<div class="row">
+				<label for="Ruser" class="xie">
+					<img src="./src/user.svg">
+					<input type="text" id ="Ruser" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="请输入账号(6-10位)" onfocus="clearRegisthint();" autocomplete="off" maxlength="10" name="user">
+				</label>
+			</div>
+			<div class="row">
+				<label for="Rpass" class="xie">
+					<img src="./src/pass.svg">
+					<input type="password" id ="Rpass" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="请输入密码(6-10位)" onfocus="clearRegisthint();" autocomplete="off" maxlength="10" name="user">
+				</label>
+			</div>
+			<div class="row">
+				<label for="Rname" class="xie">
+					<img src="./src/name.svg">
+					<input type="password" id ="Rname" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="请输入昵称(1-6位)" onfocus="clearRegisthint();" autocomplete="off" maxlength="6" name="user">
+				</label>
+			</div>
+			<div id="registhint">
+				<span></span>
+			</div>
+			<div class="row0">
+				<input type="submit" class="shou" value="注册">
+			</div>
+			<div class="row0">
+				<span class="shou" onclick="Box('block');">登陆</span>
+			</div>
+		</form>
+	</div>
+	<div id="ChatWin" class="Drag">
+		<div class="ChatUserlist noDrag noselect">
+			<li value="0" onmouseover="listover(this,1);" onmouseout="listover(this,0)">
+				<div class="listuserhead">2</div>
+				<div class="row">
+					<span class="listusername">236</span>
+					<span class="listnewsnum">9999</span>
+				</div>
+				<div class="row">
+					<span class="listusernews">你说什么？11111111111111111</span>
+				</div>
+				<div class="listdel">
+					<img class="shou" src="./src/dellist.svg">
+				</div>
+			</li>
+		</div>
+		<div class="noDrag" id ="ChatUsernews">
+			<li>
+				<div class="Llisthead noselect">5</div>
+				<span class="Llistname">567</span>
+				<div style="clear:both;"></div>
+				<div class="Llistnews">12345/987896412345/987896412345/987896412345/987896412345/987896412345/9878964</div>
+			</li>
+			<li>
+				<div class="Rlisthead noselect">5</div>
+				<span class="Rlistname">567</span>
+				<div style="clear:both;"></div>
+				<div class="Rlistnews">12345/987896412345/987896412345/987896412345/987896412345/987896412345/9878964</div>
+			</li>
+			<li class="listhint">
+				<div class="listtime">19:30</div>
+			</li>
+		</div>
+		<div class="ChatUser noDrag noselect">
+			<div id="Userhead">5</div>
+			<div id="Username">567</div>
+		</div>
+		<div class="ChatButton noDrag noselect">
+			<img class="shou" src="./src/close.svg" onclick="CloseWin($(this));">
+		</div>
+		<div class="Chatinputbox noDrag noselect">
+			<textarea id="Input" spellcheck="false"></textarea>
+			<button class="shou" onclick="Send(Input.value);">发送</button>
+		</div>
+	</div>
+	<div id="UserInfoWin" class="Drag">
+		<div class="WinButton noDrag noselect">
+			<img src="./src/close.svg" onclick="CloseWin($(this));">
+		</div>
+		<div class="userBox noselect noDrag">
+			<div class="userhead noselect noDrag">洛</div>
+			<div class="usersign noselect noDrag">132456</div>
+			<div class="row">
+				<span>昵称</span>
+				<div class="usernum">123456</div>
+			</div>
+			<div class="row">
+				<span>性别</span>
+				<div class="sex">男</div>
+			</div>
+			<div class="editBox">
+				<button onclick="edit(1);"><img src="./src/edit.svg"></button>
+			</div>
+		</div>
+		<div class="usereditBox noselect noDrag">
+			<div class="row">
+				<label for="Ename">
+					<span>昵称</span>
+					<input class="edit" type="text" id="Ename" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="你的昵称" autocomplete="off" maxlength="6" name="Ename">
+				</label>
+			</div>
+			<div class="row">
+				<label for="Esex">
+					<span>性别</span>
+					<select class="edit" id="Esex">
+						<option value="未知">未知</option>
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+				</label>
+			</div>
+			<div class="row">
+				<textarea name="sign" id="Esign" onKeyUp="value=value.replace(/[\W]/g,'')" placeholder="个性签名" rows="6" maxlength="60" spellcheck="false"></textarea>
+			</div>
+			<!-- <div class="row">
+				<label for="Eoldpass">
+					<span>原密码</span>
+					<input class="edit" type="password" id="Eoldpass" placeholder="原密码" maxlength="15" name="oldpass">
+				</label>
+			</div>
+			<div class="row">
+				<label for="Epass">
+					<span>新密码</span>
+					<input class="edit" type="password" id="Epass" placeholder="新密码" maxlength="15" name="pass">
+				</label>
+			</div> -->
+			<div class="editBox">
+				<button onclick="setUserInfo();"><img src="./src/complete.svg"></button>
+			</div>
+		</div>
+	</div>
+	<div id="Hint" class="noselect">
+		123
+	</div>
+</div>
+</body>
+</html>

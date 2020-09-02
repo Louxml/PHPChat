@@ -1,0 +1,139 @@
+#UserInfoWin .userBox{
+	width:100%;
+	height:370px;
+	margin-top:30px;
+	display:table;
+	/*display: none;*/
+}
+#UserInfoWin .userBox .userhead{
+	margin:0px auto;
+	margin-top:30px;
+	width:80px;
+	height:80px;
+	line-height: 80px;
+	text-align:center;
+	background:#ccc;
+	color:#fff;
+	font-size:30px;
+	border-radius:40px;
+}
+#UserInfoWin .userBox .usersign{
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	font-size:12px;
+	color:#ccc;
+	text-align:center;
+	/*background:#333;*/
+}
+#UserInfoWin .userBox .row{
+	width:100%;
+	min-height:30px;
+	line-height: 30px;
+	/*background:#ccc;*/
+}
+#UserInfoWin .userBox .row span{
+	float:left;
+	width:120px;
+	color:#333;
+	font-size:14px;
+	text-align:right;
+}
+#UserInfoWin .userBox .row div{
+	float:right;
+	width:160px;
+	color:#666;
+	font-size:14px;
+	text-align:left;
+}
+#UserInfoWin .editBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+#UserInfoWin .usereditBox{
+	width:100%;
+	height:350px;
+	padding-top:50px;
+	display: table;
+	display: none;
+	/*background:#ccc;*/
+}
+#UserInfoWin .usereditBox .row{
+	width:100%;
+	min-height:30px;
+	line-height: 30px;
+	margin-top:10px;
+}
+#UserInfoWin .editBox button{
+	width:46px;
+	height:46px;
+	padding:0;
+	outline: none;
+	border:none;
+	box-shadow: 0 1px 6px #aaa;
+	border-radius:23px;
+	background:#fff;
+}
+#UserInfoWin .editBox button img{
+	width:30px;
+}
+#UserInfoWin .usereditBox .row label{
+	margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow:0 1px 10px #aaa;
+    background: #fff;
+}
+#UserInfoWin .usereditBox .row span{
+	float:left;
+    width: 30px;
+    height: 30px;
+    color:#666;
+    font-size:14px;
+    margin-left:15px;
+    line-height:30px;
+}
+#UserInfoWin .usereditBox .row .edit{
+	width:140px;
+	height:30px;
+	float:left;
+	font-size:14px;
+	line-height: 30px;
+	letter-spacing:1px;
+	padding:0;
+	color:#666;
+	margin-left:10px;
+	border:none;
+	outline:none;
+}
+#UserInfoWin .usereditBox .row textarea{
+	width: 200px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 5px 8px 5px 8px;
+    display: block;
+    border: none;
+    color: #333;
+    font-family: "微软雅黑";
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    resize:none;
+    box-shadow:0 1px 10px #aaa;
+}
+#UserInfoWin .WinButton{
+	height:30px;
+	float:right;
+}
+#UserInfoWin .WinButton img{
+	float:right;
+	margin-left:2px;
+	width:30px;
+}
+#UserInfoWin .WinButton img:hover{
+	cursor:pointer;
+}

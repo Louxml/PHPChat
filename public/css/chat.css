@@ -1,0 +1,422 @@
+#ChatWin .ChatUserlist{
+	width:200px;
+	height:100%;
+	float:left;
+	display:none;
+	background:#666;
+}
+#ChatWin .ChatUser{
+	float:left;
+	margin-left:-600px;
+	width:80px;
+	height:80px;
+}
+#ChatWin .ChatButton{
+	float:right;
+	width: 50px;
+	height:50px;
+	margin-left:-50px;
+	/*background:#ccc;*/
+}
+#ChatWin #ChatUsernews{
+	float: left;
+	width:600px;
+	height:400px;
+	margin-top:80px;
+	overflow: auto;
+	background:#eee;
+}
+#ChatWin #ChatUsernews::-webkit-scrollbar {
+    width: 10px;
+    border-radius:6px;
+    background-color: #ddd;
+}
+
+#ChatWin #ChatUsernews::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius:6px;
+}
+
+#ChatWin #ChatUsernews::-webkit-scrollbar-thumb {
+	border-radius:6px;
+    background: #bbb;
+}
+#ChatWin .ChatUser #Userhead{
+	width:50px;
+	height:50px;
+	float:left;
+	border-radius:25px;
+	margin-top:15px;
+	margin-left:20px;
+	line-height:50px;
+	color:#eee;
+	font-size:24px;
+	text-align:center;
+	background:#aaa;
+}
+#ChatWin .ChatUser #Username{
+	float:left;
+	width:120px;
+	margin-top:-50px;
+	margin-left:80px;
+	font-size:20px;
+}
+#ChatWin .ChatButton img{
+	width:30px;
+	height:30px;
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}
+#ChatWin .Chatinputbox{
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:600px;
+	height:120px;
+	background:#fff;
+}
+
+#ChatWin .ChatUserlist li{
+	display: block;
+	width:190px;
+	height:60px;
+	margin:5px auto;
+	overflow: hidden;
+	border-radius:5px
+}
+#ChatWin .ChatUserlist .selected{
+	display: block;
+	width:190px;
+	height:60px;
+	margin:5px auto;
+	overflow: hidden;
+	border-radius:5px;
+	background:rgba(255,255,255,0.9);
+}
+#ChatWin .ChatUserlist li:hover{
+	background:rgba(255,255,255,0.3);
+}
+#ChatWin .ChatUserlist .selected:hover{
+	background:#f0f0f0;
+}
+#ChatWin .ChatUserlist li .listuserhead{
+	width:40px;
+	height:40px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	font-size:16px;
+	text-align: center;
+	line-height: 40px;
+	border-radius:20px;
+	background:#ccc;
+}
+#ChatWin .ChatUserlist li .row{
+	width:100%;
+	height:30px;
+}
+#ChatWin .ChatUserlist li .row .listusername{
+	float: left;
+	max-width: 80px;
+	height:20px;
+	margin-top:10px;
+	margin-left:5px;
+	font-size:16px;
+	display: block;
+	color:#eee;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ChatWin .ChatUserlist .selected .row .listusername{
+	float: left;
+	max-width: 80px;
+	height:20px;
+	margin-top:10px;
+	margin-left:5px;
+	font-size:16px;
+	display: block;
+	color:#000;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ChatWin .ChatUserlist li .row .listnewsnum{
+	float: right;
+	height:20px;
+	display: block;
+	font-size:12px;
+	margin-top:10px;
+	margin-right:5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius:10px;
+	line-height: 20px;
+	color:#fff;
+	background:#f33;
+}
+#ChatWin .ChatUserlist .selected .row .listnewsnum{
+	float: right;
+	height:20px;
+	display: block;
+	font-size:12px;
+	margin-top:10px;
+	margin-right:5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius:10px;
+	line-height: 20px;
+	color:#fff;
+	background:#f33;
+}
+#ChatWin .ChatUserlist li .row .listusernews{
+	float:left;
+	color:#888;
+	max-width: 110px;
+	display: block;
+	font-size: 12px;
+	margin-top:2px;
+	margin-left: 5px;
+	color:#ccc;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ChatWin .ChatUserlist .selected .row .listusernews{
+	float:left;
+	color:#888;
+	max-width: 110px;
+	display: block;
+	font-size: 12px;
+	margin-top:2px;
+	margin-left: 5px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+#ChatWin .ChatUserlist li .listdel{
+	width:75px;
+	height:30px;
+	margin-top:-60px;
+	float:right;
+	display: none;
+}
+#ChatWin .ChatUserlist li .listdel img{
+	width:20px;
+	height:20px;
+	display:block;
+	float:right;
+	margin-top:20px;
+	margin-right:10px;
+}
+#ChatWin .ChatUserlist .selected .listdel{
+	width:75px;
+	height:30px;
+	margin-top:-60px;
+	float:right;
+	display: none;
+}
+#ChatWin .ChatUserlist .selected .listdel img{
+	width:20px;
+	height:20px;
+	display:block;
+	float:right;
+	margin-top:20px;
+	margin-right:10px;
+}
+#ChatWin .Chatinputbox #Input{
+	width:600px;
+	height:80px;
+	padding:10px;
+	font-size:15px;
+	font-family: "微软雅黑";
+	border:none;
+	outline:none;
+	resize:none;
+	background:transparent;
+}
+#ChatWin .Chatinputbox #Input::-webkit-scrollbar {
+    width: 10px;
+    border-radius:6px;
+    background-color: #ddd;
+}
+
+#ChatWin .Chatinputbox #Input::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius:6px;
+}
+
+#ChatWin .Chatinputbox #Input::-webkit-scrollbar-thumb {
+	border-radius:6px;
+    background: #bbb;
+}
+#ChatWin .Chatinputbox button{
+	width:100px;
+	height:30px;
+	float:right;
+	margin-top:3px;
+	margin-right:10px;
+	background:#3d3;
+	color:#fff;
+	border:none;
+	outline:none;
+	border-radius:16px;
+}
+#ChatWin #ChatUsernews li{
+	width:100%;
+	float:left;
+	display:block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#ChatWin #ChatUsernews li .Llisthead{
+	width:40px;
+	height:40px;
+	float:left;
+	margin-top:0px;
+	margin-left:20px;
+	font-size:20px;
+	text-align:center;
+	line-height:40px;
+	border-radius:20px;
+	background: #fff;
+}
+#ChatWin #ChatUsernews li .Llistname{
+	float:left;
+	max-width: 200px;
+	height:20px;
+	display:block;
+	font-size: 13px;
+	color:#666;
+	margin-left:20px;
+	/*background: #fff;*/
+}
+#ChatWin #ChatUsernews .Llistnews{
+	float:left;
+	max-width: 300px;
+	margin-top:-20px;
+	margin-left:80px;
+	padding:10px;
+	border-radius:5px;
+	word-wrap:break-word;
+	white-space:pre-wrap;
+	letter-spacing:1px;
+	box-shadow: 0 1px 2px #ccc;
+	background:#fff;
+}
+#ChatWin #ChatUsernews .Llistnews .newsHeader{
+	width: 180px;
+    height: 30px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    color: #c96;
+}
+#ChatWin #ChatUsernews .Llistnews .newsBodyer{
+	width:180px;
+    font-size: 13px;
+    text-align: center;
+    line-height:20px;
+    padding-bottom: 10px;
+    word-wrap:break-word;
+	white-space:pre-wrap;
+	letter-spacing:1px;
+}
+#ChatWin #ChatUsernews .Llistnews .newsFooter{
+	width:180px;
+	height:22px;
+}
+#ChatWin #ChatUsernews .Llistnews .newsFooter button{
+	width: 50%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+#ChatWin #ChatUsernews .Llistnews .newsFooter .newsTrue{
+	color:#3d3;
+	text-align:center;
+}
+#ChatWin #ChatUsernews .Llistnews .newsFooter .newsFalse{
+	text-align:center;
+	color:#d33;
+}
+#ChatWin #ChatUsernews .Llistnews:before{
+	content: "";
+	float:left;
+	width: 0;
+    height: 0;
+    margin-top:-10px;
+    margin-left:-20px;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: transparent #fff transparent;
+}
+#ChatWin #ChatUsernews li .Rlisthead{
+	width:40px;
+	height:40px;
+	float:right;
+	margin-top:0px;
+	margin-right:20px;
+	font-size:20px;
+	text-align:center;
+	line-height:40px;
+	border-radius:20px;
+	background: #fff;
+}
+#ChatWin #ChatUsernews li .Rlistname{
+	float:right;
+	max-width: 200px;
+	height:20px;
+	display:block;
+	font-size: 13px;
+	color:#666;
+	margin-right:20px;
+	/*background: #fff;*/
+}
+#ChatWin #ChatUsernews .Rlistnews{
+	float:right;
+	max-width: 300px;
+	margin-top:-20px;
+	margin-right:80px;
+	padding:10px;
+	color:#fff;
+	border-radius:5px;
+	word-wrap:break-word;
+	white-space:pre-wrap;
+	letter-spacing:1px;
+	box-shadow: 0 1px 2px #333;
+	background:#666;
+}
+#ChatWin #ChatUsernews .Rlistnews:before{
+	content: "";
+	float:right;
+	width: 0;
+    height: 0;
+    margin-top:-10px;
+    margin-right:-20px;
+    border-width:0 0 20px 20px;
+    border-style: solid;
+    border-color: transparent #666 transparent;
+}
+#ChatWin #ChatUsernews .listhint{
+	width:100%;
+	clear:both;
+	display:block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#ChatWin #ChatUsernews .listhint .listtime{
+	width:auto;
+	display:table;
+	padding-left: 20px;
+	padding-right: 20px;
+	height:20px;
+	line-height:20px;
+	border-radius:10px;
+	font-size:12px;
+	margin:0 auto;
+	color:#fff;
+	background:#999;
+}
